@@ -34,6 +34,11 @@ pipeline {
             echo "Unit Testing Goes Here"
           }
         }
+        stage('acceptance'){
+           steps{
+            input('Do you want to Proceed?')
+          }
+        }
         stage('deploy'){
           steps{
             echo "Deploy into tomcat"
